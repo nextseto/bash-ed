@@ -1,0 +1,2 @@
+#! bashed
+echo xpwd
