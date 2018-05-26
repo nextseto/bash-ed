@@ -1,6 +1,5 @@
 /** Warren Seto
- CSC345-01
- Project 1 */
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -61,8 +60,8 @@ int scriptMode = 0; // Flag to indicate that custom #! bashed script is running
 int main(int argc, const char * argv[])
 {
     /* 
-        Before the user interacts witht the terminal,
-        the console window must be set to non-canoical mode
+        Before the user interacts with the terminal,
+        the console window must be set to non-canonical mode
         which allows this program to capture and process every command/keystroke 
      */
     
@@ -74,7 +73,7 @@ int main(int argc, const char * argv[])
     tcsetattr(0, TCSANOW, &newtio);
     
     /* 
-        Once non-canoical mode is turned on, the program will need to keep track of three things:
+        Once non-canonical mode is turned on, the program will need to keep track of three things:
         1. What the user inputted into the terminal
         2. Where the user's last position was when inputting
         3. And, when the command on screen needs to be replaced with a string from history
@@ -101,7 +100,7 @@ int main(int argc, const char * argv[])
                 case 'A': // Up Arrow Key
                     
                     /* Whenever the user first presses the up arrow key,
-                     copy what the user enetered into a temporary place for later */
+                     copy what the user entered into a temporary place for later */
                     if (historyIndex == -1)
                     {
                         keyboard.buffer[keyboard.position] = '\0';
@@ -321,7 +320,7 @@ void coreProcess(char* input)
         executeCommand(tempInput.values, asyncFlag);
     }
     
-    /* Bookeeping: Freeing memory allocated on the heap and adding the command to the history */
+    /* Bookkeeping: Freeing memory allocated on the heap and adding the command to the history */
     freeStringArray(&tempInput);
     addHistory(input);
 }
@@ -684,4 +683,3 @@ char* readFileContents(char *filename)
     
     return buffer;
 }
-

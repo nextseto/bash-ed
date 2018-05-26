@@ -1,5 +1,7 @@
 # bash-ed
 
+An alternative shell for UNIX-based systems.
+
 The implementation for this project is located in main.c in this directory. A written breakdown of what it implements is detailed in this document below.
 
 ## Part 1
