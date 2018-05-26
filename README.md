@@ -16,17 +16,17 @@
 
 ## Installation
 
-### Requirements
-
-- Tested with macOS Sierra/High Sierra (10.12+)
-- Linux distros. Mainly tested with Ubuntu 16.04
-
 ### How to use
 
 1. Clone the directory: `git clone `
 2. Navigate to the source directory: `cd bash-ed/source`
 3. Compile with `make`
 4. Run with `./bashed`
+
+### Works with...
+
+- Tested with macOS Sierra (10.11+)
+- Linux distros; mainly tested with Ubuntu 16.04
 
 ## License
 

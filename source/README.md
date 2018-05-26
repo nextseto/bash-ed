@@ -48,20 +48,20 @@ While this feature is useful when using the shell, the program does have checks 
 
 **bash-ed** provides the user with a range of additional commands that provide directory manipulation features. In this program, each custom function either masks existing bash commands or uses C library functions to perform each task. In addition, each function has its own way to handle errors and provides text to the user when the input is incorrect. The following commands were implemented:
 
-- create : This will create a folder within the current directory.
+- `create`: This will create a folder within the current directory.
   - Usage: create `<name of the directory>`
   
-- cd : This will move the current working directory to a given path 
- - Usage: `cd <directory path>`
+- `cd`: This will move the current working directory to a given path 
+  - Usage: `cd <directory path>`
 
-- rename/move : This will rename a directory from one name to another or move a directory from one path to another.
- - Usage 1: `rename <current directory name> <new directory name>`
- - Usage 2: `move <source directory> <destination directory>`
+- `rename/move`: This will rename a directory from one name to another or move a directory from one path to another.
+  - Usage 1: `rename <current directory name> <new directory name>`
+  - Usage 2: `move <source directory> <destination directory>`
 
-- copy : This will copy the contents of one directory to the contents of another directory.
- - Usage: `copy <source directory> <destination directory>`
+- `copy`: This will copy the contents of one directory to the contents of another directory.
+  - Usage: `copy <source directory> <destination directory>`
 
-- delete : This will delete a given directory and all of its contents.
+- `delete`: This will delete a given directory and all of its contents.
   - Usage: `delete <name of the directory>`
 
 ## Part 5
@@ -69,7 +69,3 @@ While this feature is useful when using the shell, the program does have checks 
 **bash-ed** needs to be able to read in a given script and execute it if it is 'bashed' compatible. For a script to be compatible, the first line of the script should include the string `#! bashed` to let the program know that it can be executed with support with normal bash or additional commands that were implemented in part three of this project. 
 
 In this program, it first detects if the user’s input is the path or name of a script and then tries to read its contents. The contents of the script are then split by new lines to get each string of commands. Then each command is executed until there are no more commands. Along with support for `#! bashed` compatibility, the program also supports bash scripts by checking if the script is for bash. If the script is not compatible with `#! bashed` then it gets passed and executed in the system’s default bash.
-
-## License
-
-All **source code** in this repository is released under the MIT license. See LICENSE for details.
